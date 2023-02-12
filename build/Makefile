@@ -114,14 +114,14 @@ $(foreach distro,${FEDORA_DISTROS}, \
 )
 endif
 
-$(foreach distro,${ALLCROSS_DISTROS}, \
-	$(foreach subarch,${ALL_ARCHES}, \
-		$(eval $(call MAIN_TEMPLATE,${subarch},${distro})) \
-	) \
-	$(foreach subarch,${ALL_ARCHES}, \
-		$(eval $(call KERNEL_TEMPLATE,${subarch},${distro})) \
-	) \
-)
+# $(foreach distro,${ALLCROSS_DISTROS}, \
+# 	$(foreach subarch,${ALL_ARCHES}, \
+# 		$(eval $(call MAIN_TEMPLATE,${subarch},${distro})) \
+# 	) \
+# 	$(foreach subarch,${ALL_ARCHES}, \
+# 		$(eval $(call KERNEL_TEMPLATE,${subarch},${distro})) \
+# 	) \
+# )
 
 clean: ${CLEAN}
 	rm -f VERSION
